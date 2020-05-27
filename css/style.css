@@ -62,12 +62,11 @@ body {
 header {
   background-color: var(--heder-background-color);
   color: var(--tittle-text-color);
+  background-color: greenyellow;
 }
 .top .conteiner {
   display: flex;
 
-  /* align-items: center; */
-  background-color: tomato;
   align-items: baseline;
 }
 
@@ -135,13 +134,15 @@ span {
 
   text-transform: uppercase;
 }
-.image {
+/* .image {
   padding: 25px 100px;
   border-radius: 4px;
   display: block;
 
   margin-bottom: 30px;
-}
+  background: #f5f4fa;
+  border-radius: 4px;
+} */
 
 .filter {
   color: var(--tittle-text-color);
@@ -150,13 +151,24 @@ span {
 /* колір замінити на білий */
 
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  height: 600px;
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
+  /* padding-top: 200px;
+  padding-bottom: 200px; */
   text-align: center;
-
-  background-color: violet;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.8),
+      rgba(47, 48, 58, 0.8)
+    ),
+    url("../images/Header-img.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 .section-hero {
+  padding-top: 200px;
   margin: 0px 0px 46px 0px;
   text-align: center;
   font-weight: 900;
@@ -165,7 +177,7 @@ span {
   letter-spacing: 6%;
   text-transform: uppercase;
   text-align: center;
-  color: var(--footer-background-color);
+  color: var(--hero-text-color);
   height: 104px;
 }
 
@@ -212,11 +224,40 @@ span {
   align-content: center;
   flex-wrap: nowrap;
 
-  /* background-color: yellow; */
+  background-color: yellow;
 }
 .advantages {
   width: 270px;
+  /* height: 120px; */
 }
+.advantages::before {
+  display: block;
+  height: 120px;
+  content: "";
+  /* background-size: contain; */
+  background-size: 70px;
+
+  background-image: url(../images/antenna.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+.advantages:nth-child(1)::before {
+  background-image: url(../images/antenna.svg);
+}
+.advantages:nth-child(2)::before {
+  background-image: url(../images/clock.svg);
+}
+.advantages:nth-child(3)::before {
+  background-image: url(../images/diagram.svg);
+}
+.advantages:nth-child(4)::before {
+  background-image: url(../images/astronaut.svg);
+}
+
 .advantages:not(:last-child) {
   margin-right: 30px;
 }
@@ -304,6 +345,9 @@ span {
   border-radius: 4px;
   background-color: var(--hero-text-color);
   width: 270px;
+
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
 }
 .section-workers {
   font-weight: 500;
@@ -463,9 +507,10 @@ span {
   padding: 6px 22px;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.88;
+  line-height: 1.62;
   height: 38px;
   border-radius: 4px;
+  text-align: center;
   font-family: Roboto, sans-serif;
 }
 
@@ -475,10 +520,8 @@ span {
 }
 
 .card {
-  padding-top: 20;
-  padding-right: 24px;
-  padding-bottom: 20px;
-  padding-left: 24px;
+  padding: 20px 24px;
+
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
