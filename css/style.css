@@ -746,7 +746,6 @@ address {
 
   background-position: center;
 
-  fill: var(--hero-text-color);
   background-color: rgba(255, 255, 255, 0.1);
   background-repeat: no-repeat;
 }
@@ -754,6 +753,7 @@ address {
   margin-right: 10px;
 }
 .icon {
+  fill: var(--hero-text-color);
   padding: auto;
   align-items: center;
 }
