@@ -170,7 +170,7 @@ span {
 }
 .section-hero {
   padding-top: 200px;
-  margin: 0px 0px 46px 0px;
+  margin: 0px 0px 30px 0px;
   text-align: center;
   font-weight: 900;
   font-size: 44px;
@@ -179,7 +179,7 @@ span {
   text-transform: uppercase;
   text-align: center;
   color: var(--hero-text-color);
-  height: 104px;
+  height: 120px;
 }
 
 /*  button*/
